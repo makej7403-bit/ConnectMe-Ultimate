@@ -1,0 +1,24 @@
+/* This file is necessary to include the base Tailwind styles.
+It is imported by src/main.jsx. 
+When building on Vercel, this is processed to generate the final CSS bundle.
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4a5568; /* Tailwind gray-600 */
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #1f2937; /* Tailwind gray-800 */
+}
+
+/* Ensure the root element takes up the full height */
+html, body, #root {
+  min-height: 100vh;
+  margin: 0;
+}
